@@ -49,6 +49,7 @@ router.post("/register", async (req, res) => {
     const token = generateToken(user._id);
 
     res.status(201).json({
+      message: "Kullanıcı başarıyla oluşturuldu",
       token,
       user: {
         id: user._id,
